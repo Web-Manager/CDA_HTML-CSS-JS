@@ -1,25 +1,23 @@
 /*
-    Modifiez le script pour rendre le programme de ToDo list fonctionnel
+ Modifiez le script pour rendre le programme de ToDo list fonctionnel
 
-    Supprimer ce qui n'est pas nécessaire
-*/
-let addButton = document.querySelector('#addButon');
+ Supprimer ce qui n'est pas nécessaire
+ */
+let addButton = document.querySelector('#addButton');
 
-addButton.addEventListener('clik', (event) => {
-  
-    let todo = document.querySelector(".todo");
-    if(todo.value != "")
-    {
-        let tableau = document.querySelector('#todolists tbody');
-        let newRow = tableau.insertRow();
-        let newColumn = newRow.insertCell();
+addButton.addEventListener('click', (event) => {
+  let todo = document.querySelector("#todo");
 
-        let list = document.createTextNode(todos.value);
-        newColumn.appendChild(lists);
+  if (todo.value != "") {
+    let tableau = document.querySelector('#todolist tbody');
+    let newRow = tableau.insertRow();
+    let newColumn = newRow.insertCell();
 
-        
-        todo.value = "";
-    }
+    let list = document.createTextNode(todo.value);
 
-    e.preventDefault();
+    newColumn.appendChild(list);
+    todo.value = "";
+  }
+
+  e.preventDefault();
 });
