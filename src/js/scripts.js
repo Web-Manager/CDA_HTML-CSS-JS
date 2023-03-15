@@ -1,8 +1,16 @@
 /***** Functions *****/
-function display(str) {
+/*
+ * @param {type} str
+ * @returns {undefined}
+ */function display(str) {
   console.log(str);
 }
 
+/*
+ * 
+ * @param {type} str
+ * @returns {Boolean}
+ */
 function isEmpty(str) {
   if (str.length == 0) {
     return true;
@@ -83,7 +91,6 @@ let temp;
 btnEx3.addEventListener('click', (e) => {
   let result = "Impossible de faire l'exercice si vous n'entrez pas deux nombre !";
 
-display(inputNumberEx31.value + " / " + inputNumberEx32.value);
   if (!isEmpty(inputNumberEx31) && !isEmpty(inputNumberEx32)) {
     document.querySelector("#firstNumber").innerText = "Le premier chiffre que vous avez entré est : " + inputNumberEx31.value;
     document.querySelector("#secondNumber").innerText = "Le second chiffre que vous avez entré est : " + inputNumberEx32.value;
@@ -97,4 +104,41 @@ display(inputNumberEx31.value + " / " + inputNumberEx32.value);
   }
 
   resultEx3.innerText = result;
+});
+
+/* EXercice 3 :
+ * De demander à l'utilisateur d'entrer son niveau de compte (Abonné, Contributeur, Administrateur)
+ * A l'aide d'un SWITCH,afficher à l'utilisateur :
+ *    - Vous êtes un abonné. Dans le cas ou c'est un Abonné
+ *    - Vous êtes un contributeur. Dans le cas ou c'est un Contributeur
+ *    - Vous êtes un administrateur. Dans le cas ou c'est un Administrateur.
+ *    - Vous n'êtes pas dans la liste. Dans tous les autres cas
+*/
+
+let profileList4 = document.querySelector("#profileList4");
+let btnEx4 = document.querySelector("#btnEx4");
+let resultEx4 = document.querySelector("#resultEx4");
+
+btnEx4.addEventListener('click', (e) => {
+  let result = "Merci de choisir votre profil dans la liste !";
+
+  if (profileList4.selectedIndex == 1) {
+    switch (profileList4.value) {
+      case "subscriber":
+        result = "Abonné(e)";
+        break;
+      case "contributor":
+        result = "Contributeur(trice)";
+        break;
+      case "administrtor":
+        result = "Administrateur(trice)";
+        break;
+      default:
+        result = "Profil introuvable";
+    }
+    
+    result = "Votre profil est : " + result;
+  }
+
+  resultEx4.innerText = result;
 });
