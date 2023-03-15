@@ -1,24 +1,27 @@
-/***** Functions *****/
+//***** Functions *****/
 /*
  * @param {type} str
  * @returns {undefined}
- */function display(str) {
+ */
+function display(str) {
   console.log(str);
 }
 
 /*
- * 
+ *
  * @param {type} str
  * @returns {Boolean}
  */
-function isEmpty(str) {
-  if (str.length == 0) {
-    return true;
-  } else {
-    return false;
+function isNotEmpty(str) {
+  let result = false;
+
+  if (str.value !== "") {
+    result = true;
   }
+
+  return result;
 }
-/*** End Functions ***/
+//** End Functions ***/
 
 /* Exercice 1
  *
@@ -34,7 +37,7 @@ let resultEx1 = document.querySelector("#resultEx1");
 btnEx1.addEventListener('click', (e) => {
   let result = "Attention de bien indiquer votre nom !";
 
-  if (!isEmpty(inputName)) {
+  if (isNotEmpty(inputName)) {
     result = "Bonjour " + inputName.value + ", soyez le bienvenue !";
   }
 
@@ -62,11 +65,10 @@ let resultEx2 = document.querySelector("#resultEx2");
 
 btnEx2.addEventListener('click', (e) => {
   let result = "Impossible de faire un calcul sans un nombre !";
-  if (!isEmpty(inputNumberEx2)) {
+  if (isNotEmpty(inputNumberEx2)) {
     result = "Le résultat de " + inputNumberEx2.value + " x 2 est égal à " + (parseInt(inputNumberEx2.value) * 2);
   }
 
-display(inputNumberEx2.value + " / " + resultEx2);
   resultEx2.innerText = result;
 });
 
@@ -91,7 +93,7 @@ let temp;
 btnEx3.addEventListener('click', (e) => {
   let result = "Impossible de faire l'exercice si vous n'entrez pas deux nombre !";
 
-  if (!isEmpty(inputNumberEx31) && !isEmpty(inputNumberEx32)) {
+  if (isNotEmpty(inputNumberEx31) && isNotEmpty(inputNumberEx32)) {
     document.querySelector("#firstNumber").innerText = "Le premier chiffre que vous avez entré est : " + inputNumberEx31.value;
     document.querySelector("#secondNumber").innerText = "Le second chiffre que vous avez entré est : " + inputNumberEx32.value;
 
@@ -113,7 +115,7 @@ btnEx3.addEventListener('click', (e) => {
  *    - Vous êtes un contributeur. Dans le cas ou c'est un Contributeur
  *    - Vous êtes un administrateur. Dans le cas ou c'est un Administrateur.
  *    - Vous n'êtes pas dans la liste. Dans tous les autres cas
-*/
+ */
 
 let profileList4 = document.querySelector("#profileList4");
 let btnEx4 = document.querySelector("#btnEx4");
@@ -122,7 +124,7 @@ let resultEx4 = document.querySelector("#resultEx4");
 btnEx4.addEventListener('click', (e) => {
   let result = "Merci de choisir votre profil dans la liste !";
 
-  if (profileList4.selectedIndex == 1) {
+    display(profileList4.value);
     switch (profileList4.value) {
       case "subscriber":
         result = "Abonné(e)";
@@ -130,15 +132,37 @@ btnEx4.addEventListener('click', (e) => {
       case "contributor":
         result = "Contributeur(trice)";
         break;
-      case "administrtor":
+      case "administrator":
         result = "Administrateur(trice)";
         break;
       default:
         result = "Profil introuvable";
     }
-    
+
     result = "Votre profil est : " + result;
-  }
 
   resultEx4.innerText = result;
+});
+
+/* Exerci 5
+ * Demander à l'utilisateur d'entrer un nombre
+ * Vous devez ensuite afficher la table de multiplication (jusqu'à 10) de ce nombre
+ */
+
+let inputNumberEx5 = document.querySelector("#numberEx5");
+let btnEx5 = document.querySelector("#btnEx5");
+let resultEx5 = document.querySelector("#resultEx5");
+
+btnEx5.addEventListener('click', (e) => {
+  let result = "Impossible de faire la multiplication sans un nombre !";
+
+  if (isNotEmpty(inputNumberEx5)) {
+    result = "<h4>La table de : " + inputNumberEx5.value + "</h4>";
+
+    for (var i = 1; i <= 10; i++) {
+      result = result + `&nbsp;&nbsp;&nbsp; -> ${inputNumberEx5.value} x ${i} = ${parseInt(inputNumberEx5.value) * i}` + "<br>";
+    }
+  }
+
+  resultEx5.innerHTML = result;
 });
