@@ -61,3 +61,40 @@ btnEx2.addEventListener('click', (e) => {
 display(inputNumberEx2.value + " / " + resultEx2);
   resultEx2.innerText = result;
 });
+
+/* Exercice 3 :
+ *
+ * De demander à l'utilisateur d'entrer deux nombres différents
+ * Inversez les deux valeurs
+ *
+ * Afficher à l'utilisateur :
+ *  - La valeur A = (valeur A) et la valeur B = (valeur B)
+ *
+ *  - Puis ensuite afficher dessous :
+ *  - La valeur A est maintenant égale à (valeur A) et la valeur B est maintenant égale à (valeur B)
+ */
+
+let inputNumberEx31 = document.querySelector("#numberEx31");
+let inputNumberEx32 = document.querySelector("#numberEx32");
+let btnEx3 = document.querySelector("#btnEx3");
+let resultEx3 = document.querySelector("#resultEx3");
+let temp;
+
+btnEx3.addEventListener('click', (e) => {
+  let result = "Impossible de faire l'exercice si vous n'entrez pas deux nombre !";
+
+display(inputNumberEx31.value + " / " + inputNumberEx32.value);
+  if (!isEmpty(inputNumberEx31) && !isEmpty(inputNumberEx32)) {
+    document.querySelector("#firstNumber").innerText = "Le premier chiffre que vous avez entré est : " + inputNumberEx31.value;
+    document.querySelector("#secondNumber").innerText = "Le second chiffre que vous avez entré est : " + inputNumberEx32.value;
+
+    temp = inputNumberEx31.value;
+
+    inputNumberEx31.value = inputNumberEx32.value;
+    inputNumberEx32.value = temp;
+
+    result = "Désormais les chiffres sont inversés dans les champs ;-).";
+  }
+
+  resultEx3.innerText = result;
+});
