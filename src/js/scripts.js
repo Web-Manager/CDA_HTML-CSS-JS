@@ -154,7 +154,7 @@ btnTest.addEventListener('click', (event) => {
     if (tryNumber < tryLimit) {
       if (parseInt(tagNumber.value) < randomNumber) {
         msgResult += `${msgTry} echoué ! Le nombre à découvrir est plus grand<br>`;
-        
+
       } else if (parseInt(tagNumber.value) > randomNumber) {
         msgResult += `${msgTry} echoué ! Le nombre à découvrir est plus petit<br>`;
       } else {
@@ -164,7 +164,7 @@ btnTest.addEventListener('click', (event) => {
       tryNumber++;
     } else {
 //      let newP = document.createElement("p");
-      
+
       msgResult += `<p>${msgTry}</p>`;
       msgResult += "<p>Oulala ! Vous n'avez pas trouvé<br>";
       msgResult += `Le nombre était : ${randomNumber}</p>`;
@@ -176,6 +176,48 @@ btnTest.addEventListener('click', (event) => {
   console.log(msgResult + " * " + randomNumber);
 
   msgSecretNumber.innerHTML = msgResult;
+
+  event.preventDefault();
+});
+
+/* Exercice 3 : Ajouter une note à un étudiant
+ *  Ecrivez un programme qui permet d'ajouter une note à un élève.
+ *    Pour cela vous devez utiliser :
+ *      - Un tableau JavaScript
+ *      - La méthode push() pour les tableaux
+ *      - L'écouteur d'évènement au click
+ *
+ *  Chaque note que vous ajoutez doivent être ajoutée sur la page HTML
+ *  dans le tableau prévu à cet effet
+ */
+
+const tagNote = document.querySelector("#note");
+const addNote = document.querySelector('#addNote');
+const table = document.querySelector(".customTable");
+
+addNote.addEventListener('click', (event) => {
+  if (isNotEmpty(tagNote) && valueIsInt(tagNote)) {
+    const row = document.createElement("tr");
+    const cell1 = document.createElement("td");
+    const cell2 = document.createElement("td");
+    const cellText1 = document.createTextNode("a");
+    const cellText2 = document.createTextNode(tagNote.value);
+    
+    cell1.appendChild(cellText1);
+    cell2.appendChild(cellText2);
+    
+    row.appendChild(cell1, cell2);
+
+
+
+    let newRow = table.insertRow();
+    let newColumn = newRow.insertCell();
+
+    let list = document.createTextNode(table.value);
+    newP.innerText = "";
+    newColumn.appendChild(list);
+    table.value = "";
+  }
 
   event.preventDefault();
 });

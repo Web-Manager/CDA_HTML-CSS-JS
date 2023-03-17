@@ -9,10 +9,10 @@
   <body>
     <main>
       <h1>CDA formation Javascript : Dom1</h1>
-      
+
       <section>
         <h3>Exercice "Conversion"</h3>
-        
+
         <form action="#" method="get">
           <input type="text" id="secondes" value="" placeholder="Entrez des secondes à convertir">
           <input type="submit" value="Convertir" id="btnConvert">
@@ -25,7 +25,7 @@
 
       <section>
         <h3>Exercice "Nombre secret"</h3>
-        
+
         <form action="#" method="get">
           <label for="number">Tapez un nombre à découvrir entre 1 et 50 (10 essais seulement)</label>
           <br>
@@ -38,8 +38,33 @@
         </div>
       </section>
 
+      <section>
+        <h1>Exercice Notes</h1>
+
+        <form action="#" method="get">
+          <input type="text" id="note" value="" placeholder="Entrez la note /20">
+          <input type="submit" id="addNote" value="Ajouter la note">
+        </form>
+
+
+        <table class="customTable">
+          <thead>
+            <tr>
+              <th>Numéro élève</th>
+              <th>Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Numéro </td>
+              <td>Note </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
     </main>
 
-  <script src="src/js/scripts.js"></script>    
-</body>
+    <script src="src/js/scripts.js"></script>    
+  </body>
 </html>
