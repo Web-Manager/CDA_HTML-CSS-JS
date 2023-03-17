@@ -50,8 +50,6 @@ addButton.addEventListener('click', (event) => {
             + convertSeconds + secondsStr;
 
     tagConvert.innerText = result;
-
-    console.log(result);
   }
   ;
 
