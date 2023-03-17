@@ -1,5 +1,4 @@
 const  addButton = document.querySelector('#addButton');
-const tagBody = document.body;
 const newP = document.createElement('p');
 const todo = document.querySelector("#todo");
 
