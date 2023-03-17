@@ -101,3 +101,4 @@ while( count <= limit) {
   display(7, `Le compteur est à ${count}`);
   count++;
 }
+

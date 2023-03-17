@@ -1,0 +1,15 @@
+ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  text-decoration: none;
+  width: 20%;
+}
+
+ul>li { display: inline; }
+
+#message {
+  color: red;
+  font-weight: bold;
+}
+

@@ -8,12 +8,12 @@
  */
 
 const tagH1 = document.querySelector("h1");
-const tagBody = document.body;
-let newP = document.createElement('p');
+const tagMain = document.querySelector("main");
+const newP = document.createElement('p');
 
 tagH1.innerText = "Formation CDA : Evaluation exercice 8 ";
-newP.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.";
-tagBody.append(newP);
+newP.innerText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.";
+tagMain.append(newP);
 
 
 
