@@ -49,7 +49,7 @@ addButton.addEventListener('click', (event) => {
             + convertMinutes + minutesStr
             + convertSeconds + secondsStr;
 
-    tagConvert.innerHtml = "<p>" + result + "</p>";
+    tagConvert.innerText = result;
 
     console.log(result);
   }
