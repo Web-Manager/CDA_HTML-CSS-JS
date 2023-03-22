@@ -1,0 +1,28 @@
+/*
+All rights reserverd to Gilbert CAPUTO-CERNI.
+This application is to use as that. Not modifications or partial code use are autorized.
+If you want informations contact me at : manager-web@outlook.com
+
+  Created on : 22 mars 2023, 09:28:46
+  Author     : Gilbert CAPUTO-CERNI <manager-web@outlook.com>
+*/
+
+section {
+  padding-left: 30px;
+}
+
+h3 {
+  margin-left: -30px;
+}
+
+.error {
+  display: block;
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
+
+.reset {
+  display: none;
+}
+

@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <title>CDA - Javascript : Dom 5</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="src/css/styles.css" rel="stylesheet" type="text/css"/>
+
+    <title>CDA - Javascript : Dom 5</title>
   </head>
 
-  <body>
+  <body class="px-2">
     <main>
-      <h1>CDA - Javascript : Dom 5</h1>
+      <h1 class="text-center mb-5">CDA - Javascript : Dom 5</h1>
 
-      <section id="ex1">
+      <!-- Exercice 1-->
+      <section id="ex1" class="mb-5">
         <h3>Exercice 1 : Créer une calculatrice</h3>
 
         <label for="calculator">Entrez votre calcul : des chiffres séparés des opérateurs '+', '-', '*' et '/'</label><br>
-        
+
         <input id="calculator" type="text" placeholder="Entrez votre opération" />
 
         <input type="submit" value="Calcul" id="btnEqualEx1" name="btnEqualEx1" />
@@ -23,8 +27,15 @@
 
       </section>
 
-      <section id="ex3">
+      <!-- Exercice 3-->
+      <section id="ex3" class="mb-5">
         <h3>Exercice 3 : Changement de couleur de fond selon l'heure de la journée</h3>
+
+        <!-- Message Management-->
+        <div class="alert alert-success alert-dismissible">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Success!</strong> This alert box could indicate a successful or positive action.
+        </div>
 
         <form action="action">
           <p>
