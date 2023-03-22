@@ -9,20 +9,42 @@ If you want informations contact me at : manager-web@outlook.com
 
 section {
   padding-left: 30px;
+  margin-bottom: 50px;
 }
 
 h3 {
   margin-left: -30px;
 }
 
-.error {
-  display: block;
-  background-color: red;
-  color: white;
+.msg {
   padding: 10px;
 }
 
-.reset {
-  display: none;
+.error {
+  background-color: red;
+  color: white;
 }
 
+.ok {
+  background-color: green;
+  color: white;
+}
+
+.reset {
+  background: none;
+  color: black;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+#timer {
+  border: 2px double blue;
+  padding: 15px 25px;
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 25px;
+  text-align: center;
+  width: max-content;
+}

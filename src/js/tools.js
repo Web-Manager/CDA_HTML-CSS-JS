@@ -16,11 +16,11 @@ function display(str) {
 
 /*
  * Function to verify if number is integer
- * @param {type} number : number to test
+ * @param {type} elementName : Element name to verify
  * @returns {Boolean}
  */
-function numberIsInteger(number) {
-  return Number.isInteger(number);
+function valueIsInteger(elementName) {
+  return Number.isInteger(parseInt(elementName.value));
 }
 
 /*
@@ -29,7 +29,7 @@ function numberIsInteger(number) {
  * @returns {String|Boolean} True if even
  */
 function isEven(number) {
-  if (numberIsInteger(number)) { // Vérifie si c'est un entier
+  if (valueIsInteger(number)) { // Vérifie si c'est un entier
     return number % 2 === 0;
   } else { // Si pas un entier : retourne false.
     return `${number} n'est pas un entier`; // Cette information est utile uniquement dans le cas des tests unitaire
@@ -62,6 +62,29 @@ function displayArray(array) {
   });
 
   return str;
+}
+
+/*
+ * Display a error msg
+ */
+function msgError(elementName, msg) {
+  elementName.className = "msg error";
+  elementName.innerHTML = msg;
+}
+
+/*
+ * Display a error msg
+ */
+function msgOk(elementName, msg) {
+  elementName.className = "msg ok";
+  elementName.innerHTML = msg;
+}
+
+/*
+ * Reset the message displayed
+ */
+function msgReset(elementName) {
+  elementName.className = "reset";
 }
 
 

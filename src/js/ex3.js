@@ -2,6 +2,10 @@
 // Utiliser une condition pour déterminer si c'est le matin, l'après-midi ou le soir, 
 // puis changer la couleur de fond en conséquence.
 
+//*******************************************
+//******** Exercice non terminé *************
+//*******************************************
+
 function isHoursInDay(hour) {
   let result = false;
 
@@ -22,15 +26,6 @@ function isDay(int, hourBegin, hourEnd) {
   return result;
 }
 
-function msgError(elementName, msg) {
-  elementName.className = "error";
-  elementName.innerHTML = msg;
-}
-
-function msgReset(elementName) {
-  elementName.className = "reset";
-}
-
 console.log("Chargement du script : ex3.js");
 
 const sectionEx3 = document.querySelector("#ex3");
@@ -38,7 +33,6 @@ const inputHourBegin = document.querySelector("#yourHourBegin");
 const inputHourEnd = document.querySelector("#yourHourEnd");
 const inputHourTest = document.querySelector("#yourHourTest");
 const btnEx3 = document.querySelector("#btnEx3");
-const pMsgEx3 = document.querySelector("#msgEx3");
 const pResultEx3 = document.querySelector("#resultEx3");
 
 const newPEx3 = document.createElement("p");                            // Création d'un paragraphe
@@ -53,12 +47,10 @@ let result = "";
 inputHourBegin.addEventListener("focusout", (event) => {
   if (!isHoursInDay(inputHourBegin.value)) {
     result = "Veuillez entrer une heure de début du jour entre 1 et 24";
-    msgError(pMsgEx3, result);
+    msgError(pResultEx3, result);
     inputHourBegin.focus();
   } else {
-    // msgReset(pMsgEx3);
-    $('.alert').alert();
-    
+    msgReset(pResultEx3);
   }
 });
 
