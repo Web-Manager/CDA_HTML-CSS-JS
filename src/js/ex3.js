@@ -7,23 +7,23 @@
 //*******************************************
 
 function isHoursInDay(hour) {
-  let result = false;
+  let txtResultEx3 = false;
 
   if (hour > 1 && hour < 24) {
-    result = true;
+    txtResultEx3 = true;
   }
 
-  return result;
+  return txtResultEx3;
 }
 
 function isDay(int, hourBegin, hourEnd) {
-  let result = false;
+  let txtResultEx3 = false;
 
   if (int > hourBegin && int < hourEnd) {
-    result = true;
+    txtResultEx3 = true;
   }
 
-  return result;
+  return txtResultEx3;
 }
 
 console.log("Chargement du script : ex3.js");
@@ -42,12 +42,12 @@ let hourBegin = 0;
 let hourEnd = 0;
 let nowDate = new Date();
 let nowHour = nowDate.getHours();
-let result = "";
+let txtResultEx3 = "";
 
 inputHourBegin.addEventListener("focusout", (event) => {
   if (!isHoursInDay(inputHourBegin.value)) {
-    result = "Veuillez entrer une heure de début du jour entre 1 et 24";
-    msgError(pResultEx3, result);
+    txtResultEx3 = "Veuillez entrer une heure de début du jour entre 1 et 24";
+    msgError(pResultEx3, txtResultEx3);
     inputHourBegin.focus();
   } else {
     msgReset(pResultEx3);
@@ -56,7 +56,7 @@ inputHourBegin.addEventListener("focusout", (event) => {
 
 //inputHourEnd.addEventListener("focusout", (event) => {
 //    if (!isHoursInDay(inputHourEnd.value)) {
-//        result = "Veuillez entrer une heure de fin du jour entre 1 et 24";
+//        txtResultEx3 = "Veuillez entrer une heure de fin du jour entre 1 et 24";
 //        inputHourEnd.focus();
 //
 //        cssStyleError(pResultEx3);
@@ -65,27 +65,27 @@ inputHourBegin.addEventListener("focusout", (event) => {
 //
 //inputHourTest.addEventListener("focusout", (event) => {
 //    if (!isHoursInDay(inputHourTest.value)) {
-//        result = "Veuillez entrer une heure de test entre 1 et 24";
+//        txtResultEx3 = "Veuillez entrer une heure de test entre 1 et 24";
 //        inputHourTest.focus();
 //
 //        cssStyleError(pResultEx3);
-//        pResultEx3.innerHTML = result;
+//        pResultEx3.innerHTML = txtResultEx3;
 //    }
 //});
 
 //btnEx3.addEventListener(('click'), (event) => {
 //    if (!isHoursInDay(inputHourBegin.value)) {
-//        result = "Veuillez entrer une heure de début du jour entre 1 et 24";
+//        txtResultEx3 = "Veuillez entrer une heure de début du jour entre 1 et 24";
 //    } else if (!isHoursInDay(inputHourBegin.value)) {
-//        result = "Veuillez entrer une heure de fin du jour entre 1 et 24";
+//        txtResultEx3 = "Veuillez entrer une heure de fin du jour entre 1 et 24";
 //    } else if (inputHourBegin > yourHourEnd) {
-//        result = "Attention, votre heure de début ne peut-être plus grand que celui de fin,<br>et vice versa";
+//        txtResultEx3 = "Attention, votre heure de début ne peut-être plus grand que celui de fin,<br>et vice versa";
 //    }
 //
-//    result += " / Heure de début : " + inputHourBegin
+//    txtResultEx3 += " / Heure de début : " + inputHourBegin
 //            + " / Heure de fin : " + yourHourEnd
 //            + " / Heure de test : " + yourHourTest;
-//    pResultEx3.innetHTML = result;
+//    pResultEx3.innetHTML = txtResultEx3;
 ////
 ////    sectionEx3.appendChild(newPEx3);
 ////
@@ -96,4 +96,4 @@ inputHourBegin.addEventListener("focusout", (event) => {
 //    event.preventDefault();
 //});
 
-pResultEx3.innerHTML = result;
+pResultEx3.innerHTML = txtResultEx3;

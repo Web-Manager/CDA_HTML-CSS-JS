@@ -12,26 +12,25 @@ function checkEvenOdd(number) {
   return result;
 }
 
-const sectionEx4 = document.querySelector("#ex4");
 const inputEx4 = document.querySelector("#inputEx4");
 const btnEx4 = document.querySelector("#btnEx4");
 const pResultEx4 = document.querySelector("#resultEx4");
 
-let txtResult = "";
+let txtResultEx4 = "";
 
 btnEx4.addEventListener("click", (event) => {
   if (!valueIsInteger(inputEx4)) {
-    txtResult = "Veuillez entrer un nombre";
+    txtResultEx4 = "Veuillez entrer un nombre";
     msgError(pResultEx4, result);
     inputEx4.focus();
   } else {
     console.log("Nombre entier ok");
     msgOk(pResultEx4);
 
-    txtResult = `Le nombre '${inputEx4.value}' est : ` + checkEvenOdd(parseInt(inputEx4.value));
+    txtResultEx4 = `Le nombre '${inputEx4.value}' est : ` + checkEvenOdd(parseInt(inputEx4.value));
   }
   
-  pResultEx4.innerHTML = txtResult;
+  pResultEx4.innerHTML = txtResultEx4;
   
   event.preventDefault();
 });

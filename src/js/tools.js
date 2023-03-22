@@ -87,4 +87,31 @@ function msgReset(elementName) {
   elementName.className = "reset";
 }
 
+function whatIsIt(objectName) {
+  let result = "";
+  let typeOfObject = typeof(objectName);
+  
+  switch (typeOfObject) {
+    case "boolean":
+      result = "bolean";
+      break;
+    
+    case "number":
+      result = "number";
+      break;
+    
+    case "string":
+      result = "string";
+      break;
+    
+    case "object":
+      result = "object";
+      break;
+    
+    default:
+      result = "Object non défini";
+  }
+  
+  return result;
+}
 
