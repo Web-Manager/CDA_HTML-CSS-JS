@@ -2,13 +2,11 @@
 // et qui retourne la même chaîne en inversant l'ordre des caractères.
 
 function reverseString(str) {
-  return str;
-}
-
-function reverseString(str) {
   let result = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    result += str[i];
+  let lenghtStr = str.length;
+
+  for (let i = 1; i <= lenghtStr; i++) {
+    result += str[lenghtStr-i];
   }
 
   return result;

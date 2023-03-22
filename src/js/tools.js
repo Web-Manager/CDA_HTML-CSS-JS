@@ -1,8 +1,8 @@
-/* 
+/*
  * All rights reserverd to Gilbert CAPUTO-CERNI.
  * This application is to use as that. Not modifications or partial code use are autorized.
  * If you want informations contact me at : manager-web@outlook.com
- * 
+ *
  */
 
 /*
@@ -84,34 +84,36 @@ function msgOk(elementName, msg) {
  * Reset the message displayed
  */
 function msgReset(elementName) {
-  elementName.className = "reset";
+  display(elementName);
+  elementName.className = "msg reset";
+  elementName.innerHTML = "";
+  elementName.innerText = "";
 }
 
 function whatIsIt(objectName) {
   let result = "";
-  let typeOfObject = typeof(objectName);
-  
+  let typeOfObject = typeof (objectName);
+
   switch (typeOfObject) {
     case "boolean":
       result = "bolean";
       break;
-    
+
     case "number":
       result = "number";
       break;
-    
+
     case "string":
       result = "string";
       break;
-    
+
     case "object":
       result = "object";
       break;
-    
+
     default:
       result = "Object non défini";
   }
-  
+
   return result;
 }
-

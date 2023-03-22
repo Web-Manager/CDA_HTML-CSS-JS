@@ -18,11 +18,13 @@ h3 {
 
 .msg {
   padding: 10px;
+  border-radius: 5px;
 }
 
 .error {
   background-color: red;
   color: white;
+  font-weight: bold;
 }
 
 .ok {
@@ -47,4 +49,85 @@ h3 {
   border-radius: 25px;
   text-align: center;
   width: max-content;
+}
+
+
+/*** Table ***/
+table tbody td, table thead th {
+  padding: 5px 10px;
+  border-bottom: 1px solid #888888;
+}
+
+.arrowDesc {
+  width: 0;
+  height: 0;
+  float:right;
+  margin: 10px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+}
+
+.flecheAsc {
+  width: 0;
+  height: 0;
+  float:right;
+  margin: 10px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+/* Classe optionnelle pour le style */
+table {
+  margin-top: 20px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.zebre tbody tr:nth-child(odd) {
+  background-color: #CCCCCC;
+  color :#333333;
+}
+.zebre tbody tr:nth-child(even) {
+  background-color: #5d625c;
+  color: #DDDDDD;
+}
+.zebre tbody tr:hover:nth-child(odd) {
+  background-color: #999690;
+  color:#ffffff;
+}
+.zebre tbody tr:hover:nth-child(even) {
+  background-color: #999690;
+  color:#ffffff;
+}
+.withOrder th {
+  text-align:center;
+  vertical-align: middle;
+  background-color: #33ddff;
+  color: #333333;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+.withOrder th.selection {
+  background-color:#1155ff;
+  color:#fff;
+}
+
+.withOrder th.selection .arrowDesc {
+  border-bottom-color: white;
+}
+
+.withOrder th.selection .flecheAsc {
+  border-top-color: white;
+}
+
+.zebre tbody td:nth-child(3) {
+  text-align:center;
 }
