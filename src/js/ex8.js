@@ -1,0 +1,1 @@
+// Créer une fonction qui prend en entrée un tableau d'objets, chaque objet ayant un attribut "age". La fonction doit retourner l'objet ayant l'âge le plus élevé.

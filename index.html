@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>CDA - Javascript : Dom 5</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <main>
+      <h1>CDA - Javascript : Dom 5</h1>
+
+      <section id="ex1">
+        <h3>Exercice 1 : Créer une calculatrice</h3>
+
+        <label for="calculator">Entrez votre calcul : des chiffres séparés des opérateurs '+', '-', '*' et '/'</label><br>
+        
+        <input id="calculator" type="text" placeholder="Entrez votre opération" />
+
+        <input type="submit" value="Calcul" id="btnEqualEx1" name="btnEqualEx1" />
+
+        <p id="resultEx1"></p>
+
+      </section>
+
+      <section id="ex3">
+        <h3>Exercice 3 : Changement de couleur de fond selon l'heure de la journée</h3>
+
+        <form action="action">
+          <p>
+            <label for="yourHourBegin">Indiquez l'heure de début de la journée (1 -> 24) </label>&nbsp;
+            <input id="yourHourBegin" type="number" placeholder="Indiquez une heure de début" />
+          </p>
+
+          <p>
+            <label for="yourHourEnd">Indiquez l'heure de fin de la journée (1 -> 24) </label>&nbsp;
+            <input id="yourHourEnd" type="number" placeholder="Indiquez une heure de fin" />
+          </p>
+
+          <p>
+            <label for="yourHourTest">Indiquez une heure de test (1 -> 24) </label>&nbsp;
+            <input id="yourHourTest" type="number" placeholder="Indiquez une heure de test" />
+          </p>
+
+          <input type="submit" value="Calcul du temps" id="btnEx3" name="btnEx3" />
+        </form>
+
+        <p id="resultEx3"></p>
+
+      </section>
+    </main>
+
+    <footer>
+      <div>&#169; All Rights Reserved</div>
+    </footer>
+
+    <script src="src/js/tools.js"></script>
+    <script src="src/js/ex2.js"></script>
+    <script src="src/js/ex3.js"></script>
+  </body>
+</html>
+
