@@ -29,24 +29,22 @@ let txtResult = "";
  * Créer une calculatrice
  */
 
-const mainContent = new elementManager("mainContent");
-let tagMainContent = mainContent.query();
+const tagMain = new elementManager("main");
+display(tagMain.getName());
 
-display(mainContent.query());
-display(tagMainContent);
+//let tagMainContent = mainContent.query();
+//
+//display(mainContent.query());
+//display(tagMainContent);
 
 // const tagBody = document.querySelector("body");
 // const tagMainContent = document.querySelector("#mainContent");
 
-//window.onload = clearHTML(tagMainContent);
+window.onload = clearHTML(tagMain);
 
-window.onload = tagMainContent.clear();
-
-const tagSection = new elementManager("section");
-
-tagSection.create();
-tagSection.className = "rounded-1 bg-primary bg-opacity-10 mb-3";
-
-
-
-
+//window.onload = mainContent.query().clear();
+//
+//const tagSection = new elementManager("section");
+//
+//tagSection.create();
+//tagSection.className = "rounded-1 bg-primary bg-opacity-10 mb-3";

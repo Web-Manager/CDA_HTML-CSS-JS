@@ -1,12 +1,11 @@
 /*
-All rights reserverd to Gilbert CAPUTO-CERNI.
-This application is to use as that. Not modifications or partial code use are autorized.
-If you want informations contact me at : manager-web@outlook.com
+  All rights reserverd to Gilbert CAPUTO-CERNI.
+  This application is to use as that. Not modifications or partial code use are autorized.
+  If you want informations contact me at : manager-web@outlook.com
 
   Created on : 22 mars 2023, 09:28:46
   Author     : Gilbert CAPUTO-CERNI <manager-web@outlook.com>
 */
-
 main {
   margin-top: 75px;
 }
@@ -19,7 +18,6 @@ main {
 .error {
   background-color: red;
   color: white;
-  font-weight: bold;
 }
 
 .ok {
