@@ -7,13 +7,8 @@ If you want informations contact me at : manager-web@outlook.com
   Author     : Gilbert CAPUTO-CERNI <manager-web@outlook.com>
 */
 
-section {
-  padding-left: 30px;
-  margin-bottom: 50px;
-}
-
-h3 {
-  margin-left: -30px;
+main {
+  margin-top: 75px;
 }
 
 .msg {
@@ -130,4 +125,43 @@ table {
 
 .zebre tbody td:nth-child(3) {
   text-align:center;
+}
+
+.bg-blueDark {
+  background-color: #1155ff;
+}
+
+blockquote::before {
+  content: "\0022";
+  font-size: 100px;
+  position: absolute;
+  top: 9px;
+  left: 17px;
+
+}
+blockquote::before {
+
+  content: "\0022";
+  font-size: 100px;
+  position: absolute;
+  top: 9px;
+  left: 17px;
+
+}
+
+blockquote {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 30px;
+  quotes: none;
+}
+
+blockquote::before {
+  color: rgb(92, 204, 255);
+  content: "\0022";
+  font-size: 100px;
+  position: absolute;
+  top: 9px;
+  left: 17px;
 }

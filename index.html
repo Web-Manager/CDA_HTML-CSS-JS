@@ -3,131 +3,222 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="src/libraries/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+      />
 
-    <link href="src/css/styles.css" rel="stylesheet" type="text/css"/>
+    <link
+      href="src/libraries/bootstrap/themes/bootstrap-cerulean.min.css"
+      rel="stylesheet"
+      type="text/css"
+      />
+
+    <link
+      href="src/libraries/bootstrap/css/bootstrap-utilities.css"
+      rel="stylesheet"
+      type="text/css"
+      />
+
+    <link
+      href="src/css/styles.css"
+      rel="stylesheet"
+      type="text/css"
+      />
 
     <title>CDA - Javascript : Dom 5</title>
   </head>
 
   <body>
-    <main>
-      <h1 class="txt-center">CDA - Javascript : Dom 5</h1>
+    <header>
+      <nav class="navbar navbar-brand navbar-expand-md bg-primary fixed-top text-light">
+        <div class="container-fluid text-light">
+          <a href="#" class="navbar-brand">CDA</a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-      <!-- Exercice 1-->
-      <section id="ex1">
-        <h3>Exercice 1 : Créer une calculatrice</h3>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+              <a href="#" class="nav-item nav-link active">Accueil</a>
 
-        <label for="calculator">Entrez votre calcul : des chiffres séparés des opérateurs '+', '-', '*' et '/'</label><br>
+              <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Exercices</a>
+                <div class="dropdown-menu">
+                  <a href="#ex1" class="dropdown-item">Exercice 1 : Calculatrice</a>
+                  <a href="#ex2" class="dropdown-item">Exercice 2 : </a>
+                  <a href="#ex3" class="dropdown-item">Exercice 3 : </a>
+                  <a href="#ex4" class="dropdown-item">Exercice 4 : </a>
+                  <a href="#ex5" class="dropdown-item">Exercice 5 : </a>
+                  <a href="#ex6" class="dropdown-item">Exercice 6 : </a>
+                  <a href="#ex7" class="dropdown-item">Exercice 7 : </a>
+                  <a href="#ex8" class="dropdown-item">Exercice 8 : </a>
+                  <a href="#ex9" class="dropdown-item">Exercice 9 : </a>
+                </div>
+              </div>
+              <a href="#" class="nav-item nav-link">Me contacter</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-        <input id="calculator" type="text" placeholder="Entrez votre opération" />
+    <main class="container col-12">
+      <div class="bg-dark bg-opacity-75 rounded-3 p-3 mb-4">
+        <h1>CDA - Formation Javascript - Dom 5</h1>
 
-        <input type="submit" value="Calcul" id="btnEqualEx1" name="btnEqualEx1" />
+        <p class="text-white fw-bold ms-3 mt-3">
+          Il s'agit d'un ensemble d'exercices proposés en Javascript à partir de Github,
+          mis en forme avec Bootstrap 5.2.3
+        </p>
 
-        <p id="resultEx1"></p>
+        <p>
+          <a
+            class="btn btn-primary fw-bold ms-5"
+            href="https://github.com/JackAdamsJenkins/CDAPACA23.git"
+            target="_blank">
 
-      </section>
+            Lien vers la source des fichiers
+          </a>
+        </p>
+      </div>
 
-      <!-- Exercice 3-->
-      <section id="ex3">
-        <h3>Exercice 3 : Changement de couleur de fond selon l'heure de la journée (non terminé)</h3>
+      <div id="mainContent">
+        <!-- Exercice 1-->
+        <section id="ex1" class="rounded-1 bg-primary bg-opacity-10 mb-3">
+          <h4 class=" text-light bg-primary px-2 py-1 rounded-2">
+            Exercice 1 : Créer une calculatrice simple
+          </h4>
 
-        <form action="action">
-          <p>
-            <label for="yourHourBegin">Indiquez l'heure de début de la journée (1 -> 24) </label>&nbsp;
-            <input id="yourHourBegin" type="number" placeholder="Indiquez une heure de début" />
-          </p>
+          <div class="mx-3 py-2">
+            <blockquote>
+              Créer une calculatrice simple qui prend en entrée deux nombres
+              et permet de réaliser les opérations de base (addition, soustraction,
+              multiplication, division) en utilisant les fonctions et les opérateurs.
+            </blockquote>
 
-          <p>
-            <label for="yourHourEnd">Indiquez l'heure de fin de la journée (1 -> 24) </label>&nbsp;
-            <input id="yourHourEnd" type="number" placeholder="Indiquez une heure de fin" />
-          </p>
+            <form action="action" class="mx-3 my-1">
+              <label for="calculator">
+                Entrez votre calcul : des chiffres séparés d'un opérateur '+', '-', '*' et '/'
+              </label>
+              <br>
 
-          <p>
-            <label for="yourHourTest">Indiquez une heure de test (1 -> 24) </label>&nbsp;
-            <input id="yourHourTest" type="number" placeholder="Indiquez une heure de test" />
-          </p>
+              <input id="calculator" type="text" placeholder="Entrez votre opération" />
 
-          <input type="submit" value="Calcul du temps" id="btnEx3" name="btnEx3" />
-        </form>
+              <input type="submit" value="Calcul" id="btnEqualEx1" name="btnEqualEx1" />
 
-        <p id="resultEx3"></p>
+              <p id="resultEx1"></p>
+            </form>
+          </div>
+        </section>
 
-      </section>
+        <!-- Exercice 3-->
+        <section id="ex3" class="bg-primary bg-opacity-10 rounded-1 ">
+          <h4 class=" text-light bg-primary px-2 py-1 rounded-2">Exercice 3 : Changement de couleur de fond selon l'heure de la journée (non terminé)</h4>
 
-      <!-- Exercice 4-->
-      <section id="ex4">
-        <h3>Exercice 4 : Evaluer si un nombre saisie est pair ou impair</h3>
+          <form action="action">
+            <p>
+              <label for="yourHourBegin">Indiquez l'heure de début de la journée (1 -> 24) </label>&nbsp;
+              <input id="yourHourBegin" type="number" placeholder="Indiquez une heure de début" />
+            </p>
 
-        <label for="calculator">Entrez un nomber entier : </label><br>
+            <p>
+              <label for="yourHourEnd">Indiquez l'heure de fin de la journée (1 -> 24) </label>&nbsp;
+              <input id="yourHourEnd" type="number" placeholder="Indiquez une heure de fin" />
+            </p>
 
-        <input id="inputEx4" type="text" placeholder="Entrez un nombre" />
+            <p>
+              <label for="yourHourTest">Indiquez une heure de test (1 -> 24) </label>&nbsp;
+              <input id="yourHourTest" type="number" placeholder="Indiquez une heure de test" />
+            </p>
 
-        <input type="submit" value="Pair ou Impair ?" id="btnEx4" name="btnEx4" />
+            <input type="submit" value="Calcul du temps" id="btnEx3" name="btnEx3" />
+          </form>
 
-        <p id="resultEx4" class="msg"></p>
-      </section>
+          <p id="resultEx3"></p>
 
-      <!-- Exercice 5-->
-      <section id="ex5">
-        <h3>Exercice 5 : Afficher une holorge en temps réel</h3>
+        </section>
 
-        <div id="timer">00:00:00</div>
-      </section>
+        <!-- Exercice 4-->
+        <section id="ex4">
+          <h4 class=" text-light bg-primary px-2 py-1 rounded-2">Exercice 4 : Evaluer si un nombre saisie est pair ou impair</h4>
 
-      <!-- Exercice 6-->
-      <section id="ex6">
-        <h3>Exercice 6 : inversion des caratères</h3>
+          <label for="calculator">Entrez un nomber entier : </label><br>
 
-        <label for="calculator">Entrez un mot</label><br>
+          <input id="inputEx4" type="text" placeholder="Entrez un nombre" />
 
-        <input id="inputEx6" type="text" placeholder="Un mot à inverser" />
+          <input type="submit" value="Pair ou Impair ?" id="btnEx4" name="btnEx4" />
 
-        <input type="submit" value="Inversion" id="btnEx6" name="btnEx6" />
+          <p id="resultEx4" class="msg"></p>
+        </section>
 
-        <p id="resultEx6"></p>
+        <!-- Exercice 5-->
+        <section id="ex5">
+          <h4 class=" text-light bg-primary px-2 py-1 rounded-2">Exercice 5 : Afficher une holorge en temps réel</h4>
 
-      </section>
+          <div id="timer">00:00:00</div>
+        </section>
 
-      <!-- Exercice 7 -->
-      <section id="ex7">
-        <h3>Exercice 7 : Trier une liste</h3>
+        <!-- Exercice 6-->
+        <section id="ex6">
+          <h4 class=" text-light bg-primary px-2 py-1 rounded-2">Exercice 6 : inversion des caratères</h4>
 
-        <form action="#" method="get">
-          <input type="text" id="inputEx7" value="" placeholder="Entrez un tâche à effectuer">&nbsp;
-          <input type="submit" value="Ajouter à la liste" id="btnAddEx7">&nbsp;
-          <input type="submit" value="Trier la table ordre alphabétique" id="btnOrderAscEx7">&nbsp;
-          <input type="submit" value="Trier la table ordre inverse alphabétique" id="btnOrderDscEx7">
-        </form>
+          <label for="calculator">Entrez un mot</label><br>
 
-        <table id="listEx7" class="zebre withOrder">
-          <thead>
-            <tr>
-              <th data-tri="1" class="selection">Liste de Mots à trier</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!--            <tr>
-                          <td>La liste de mot</td>
-                        </tr>-->
-          </tbody>
-        </table>
+          <input id="inputEx6" type="text" placeholder="Un mot à inverser" />
 
-        <p id="resultEx7"></p>
-      </section>
+          <input type="submit" value="Inversion" id="btnEx6" name="btnEx6" />
 
-      <section id="ex8">
-        <h3>Exercice 8 : La personne la plus agée</h3>
+          <p id="resultEx6"></p>
 
-        <div id="resultEx8"></div>
-      </section>
+        </section>
 
+        <!-- Exercice 7 -->
+        <section id="ex7">
+          <h4 class=" text-light bg-primary px-2 py-1 rounded-2">Exercice 7 : Trier une liste</h4>
+
+          <form action="#" method="get">
+            <input type="text" id="inputEx7" value="" placeholder="Entrez un tâche à effectuer">&nbsp;
+            <input type="submit" value="Ajouter à la liste" id="btnAddEx7">&nbsp;
+            <input type="submit" value="Trier la table ordre alphabétique" id="btnOrderAscEx7">&nbsp;
+            <input type="submit" value="Trier la table ordre inverse alphabétique" id="btnOrderDscEx7">
+          </form>
+
+          <table id="listEx7" class="zebre withOrder">
+            <thead>
+              <tr>
+                <th data-tri="1" class="selection">Liste de Mots à trier</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--            <tr>
+                            <td>La liste de mot</td>
+                          </tr>-->
+            </tbody>
+          </table>
+
+          <p id="resultEx7"></p>
+        </section>
+
+        <section id="ex8">
+          <h4 class=" text-light bg-primary px-2 py-1 rounded-2">Exercice 8 : La personne la plus agée</h4>
+
+          <div id="resultEx8"></div>
+        </section>
+      </div>
     </main>
 
     <footer>
       <div>&#169; All Rights Reserved</div>
     </footer>
+    <script src="src/libraries/bootstrap/js/bootstrap.min.js"></script>
+    <script src="src/libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="src/js/tools.js"></script>
+    <script src="src/js/mainFunctions.js"></script>
+    <script src="src/js/mainClasses.js"></script>
+    
+    <script src="src/js/scripts.js"></script>
     <script src="src/js/ex2.js"></script>
     <script src="src/js/ex3.js"></script>
     <script src="src/js/ex4.js"></script>

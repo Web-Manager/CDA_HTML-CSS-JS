@@ -1,1 +1,0 @@
-// Créer une fonction qui prend en entrée une chaîne de caractères et qui retourne la même chaîne en inversant l'ordre des caractères.

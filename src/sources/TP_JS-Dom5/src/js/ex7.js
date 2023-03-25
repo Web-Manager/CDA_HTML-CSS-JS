@@ -1,1 +1,0 @@
-// Créer un script qui permet à l'utilisateur de saisir une liste de noms, puis affiche les noms triés par ordre alphabétique. 

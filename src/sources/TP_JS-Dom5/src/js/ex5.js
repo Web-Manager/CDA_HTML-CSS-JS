@@ -1,1 +1,0 @@
-// Créer un script qui affiche la date et l'heure actuelle en temps réel sur une page HTML en utilisant la manipulation du dom.
