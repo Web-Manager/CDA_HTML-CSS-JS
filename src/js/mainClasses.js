@@ -1,4 +1,4 @@
-/* 
+/*
  * All rights reserverd to Gilbert CAPUTO-CERNI.
  * This application is to use as that. Not modifications or partial code use are autorized.
  * If you want informations contact me at : manager-web@outlook.com
@@ -9,10 +9,8 @@ class elementManager {
     this.element = tagName;
 
     if (tagType === "") {
-      display("Si tagType est vide : '" + this.element + "' * / * " + tagType);
       this.element = document.querySelector(tagName);
     } else {
-      display("Si tagType n'est pas vide : '" + this.element + "' * / * " + tagType);
       this.element = document.createElement(tagType);
   }
   }
@@ -21,30 +19,48 @@ class elementManager {
     return this.element;
   }
 
-  append(parentName) {
-    document.parentName.appendChild(this.element);
+  getHtml() {
+    return this.element.textContent;
   }
 
-  create(parentName) {
-    document.createElement(this.element);
+  getClass() {
+    return this.element.classList;
   }
 
-  delete(parentName) {
-    document.parentName.removeChild(this.element);
+  setHtmlContent(strHtml) {
+    this.element.innerHTML = strHtml;
   }
 
-  query() {
-//    display("Query selected");
-    return document.querySelector(this.element);
-//    return "Query asked";
+  setTxtContent(strTxt) {
+    this.element.innerText = strTxt;
+  }
+
+  setAppendChild(childElement) {
+    this.element.appendChild(childElement);
+  }
+
+//  setParent(parentEl) {
+//    display(parentEl);
+//    parentEl.appendChild(this.element);
+//  }
+
+  setClass(addClass) {
+    this.element.setAttribute("class", addClass);
+  }
+
+  setNode(str) {
+    return document.createTextNode(str);
   }
 
   queryAll() {
     document.querySelectorAll(this.element);
   }
 
+  deleteElement(parentName) {
+    document.parentName.removeChild(this.element);
+  }
+
   clear() {
-    display(this.element);
     this.element.innerHTML = "";
   }
 }

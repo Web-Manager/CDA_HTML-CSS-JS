@@ -11,7 +11,7 @@
  * @param {type} elementName : The name of element to clear
  * @returns {nothing}
  */
-function clearHTML (elementName) {
+function clearHTML(elementName) {
   elementName.innerHTML = "";
 }
 
@@ -30,21 +30,23 @@ let txtResult = "";
  */
 
 const tagMain = new elementManager("main");
-display(tagMain.getName());
+const tagSection = new elementManager("", "section");
+let node = "";
 
-//let tagMainContent = mainContent.query();
-//
-//display(mainContent.query());
-//display(tagMainContent);
+tagMain.clear();
 
-// const tagBody = document.querySelector("body");
-// const tagMainContent = document.querySelector("#mainContent");
+//const para = document.createElement("p");
+//para.innerText = "This is a paragraph";
+//document.body.appendChild(para);
 
-window.onload = clearHTML(tagMain);
+tagSection.setClass("rounded-1 bg-primary bg-opacity-10 mb-3");
+node = tagSection.setNode("C'est la section");
+tagSection.setAppendChild(node);
 
-//window.onload = mainContent.query().clear();
-//
-//const tagSection = new elementManager("section");
-//
-//tagSection.create();
-//tagSection.className = "rounded-1 bg-primary bg-opacity-10 mb-3";
+tagMain.setAppendChild(tagSection.element);
+
+tagSection.getHtml();
+//tagMain.appendChild(tagSection);
+//tagMain.appendChild(tagDiv);
+//display(tagMain.getName());
+
