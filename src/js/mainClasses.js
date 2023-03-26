@@ -19,8 +19,8 @@ class elementManager {
     return this.element;
   }
 
-  getHtml() {
-    return this.element.textContent;
+  getContent() {
+    return this.element.innerHTML;
   }
 
   getClass() {
@@ -44,8 +44,8 @@ class elementManager {
 //    parentEl.appendChild(this.element);
 //  }
 
-  setClass(addClass) {
-    this.element.setAttribute("class", addClass);
+  setAttribute(typeAttrib, addAttrib) {
+    this.element.setAttribute(typeAttrib, addAttrib);
   }
 
   setNode(str) {

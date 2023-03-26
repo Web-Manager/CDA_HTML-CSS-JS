@@ -30,22 +30,71 @@ let txtResult = "";
  */
 
 const tagMain = new elementManager("main");
+const homeContent = tagMain.getContent();
 const tagSection = new elementManager("", "section");
-let node = "";
+const tagHeader4 = new elementManager("", "h3");
+const tagAlerts = new elementManager("", "div");
 
-tagMain.clear();
+let nodeMain = "";
+let nodeAlert = tagAlerts.setNode("<p></p>");
+nodeAlert += tagAlerts.setNode('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>');
+tagAlerts.setNode(nodeAlert);
 
-//const para = document.createElement("p");
-//para.innerText = "This is a paragraph";
-//document.body.appendChild(para);
+tagSection.setAttribute("class", "rounded-1 bg-primary bg-opacity-10 mb-3");
+tagHeader4.setAttribute("class", "text-light bg-primary px-2 py-1 rounded-2");
+tagAlerts.setAttribute("class", "alert alert-warning alert-dismissible fade show");
+tagAlerts.setAttribute("role", "alert");
 
-tagSection.setClass("rounded-1 bg-primary bg-opacity-10 mb-3");
-node = tagSection.setNode("C'est la section");
-tagSection.setAppendChild(node);
+function homeSection() {
+  tagMain.clear();
+  tagMain.setHtmlContent(homeContent);
+}
+
+function dom5_1() {
+  tagMain.clear();
+  tagHeader4.setHtmlContent("Exercice 1 : Créer une simple calculatrice");
+  
+  nodeMain = tagSection.setNode(tagHeader4);
+  
+/*       Exercice 1
+        <h4 class=" text-light bg-primary px-2 py-1 rounded-2">
+          Exercice 1 : Créer une calculatrice simple
+        </h4>
+  
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        Vous pouvez fermer cette alerte en cliquant sur la croix à droite
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+      </div>
+
+        <div class="mx-3 py-2">
+          <blockquote>
+            Créer une calculatrice simple qui prend en entrée deux nombres
+            et permet de réaliser les opérations de base (addition, soustraction,
+            multiplication, division) en utilisant les fonctions et les opérateurs.
+          </blockquote>
+
+          <form action="action" class="mx-3 my-1">
+            <label for="calculator">
+              Entrez votre calcul : des chiffres séparés d'un opérateur '+', '-', '*' et '/'
+            </label>
+            <br>
+
+            <input id="calculator" type="text" placeholder="Entrez votre opération" />
+
+            <input type="submit" value="Calcul" id="btnEqualEx1" name="btnEqualEx1" />
+
+            <p id="resultEx1"></p>
+          </form>
+        </div>
+      </section>
+*/
+
+tagSection.setAppendChild(nodeMain);
 
 tagMain.setAppendChild(tagSection.element);
 
 tagSection.getHtml();
+}
 //tagMain.appendChild(tagSection);
 //tagMain.appendChild(tagDiv);
 //display(tagMain.getName());
