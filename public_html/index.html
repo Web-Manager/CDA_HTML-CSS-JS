@@ -1,292 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+All rights reserverd to Gilbert CAPUTO-CERNI.
+This application is to use as that. Not modifications or partial code use are autorized.
+If you want informations contact me at : manager-web@outlook.com
+
+-->
+
+<html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="assets/img/earth.ico">
+
     <link href="src/bootstrap-5.2.3/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="src/css/styles.css" />
-    <title>Réaliser un portfolio en HTML5 et CSS3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href="src/css/styles.css" rel="stylesheet" type="text/css"/>
   </head>
-  <body>
 
-    <div id="container" class="flex">
+  <body class="container-xl">
+    <!-- Header -->
+    <!--
+        <header>
+          <nav>
+            <ul id="main-menu">
+              <li><a href="/">Accueil</a></li>
+            </ul>
+          </nav>
+
+          <div id="logo">
+            <img id="logo-pict" src="" alt="" title="">
+
+            <div id="website-title"></div>
+          </div>
+        </header>
+    -->
+
+    <!-- Main -->
+    <main class="row bg-info border-2 border-warning rounded-2 border col-12 my-3 grid">
       <!-- LEFT PART -->
-      <div id="left_part" class="padding_outer">
+      <aside id="leftPart" class="col-md-3 rounded-2 bg-success p-2 text-center">
         <!-- Profil -->
-        <div>
-          <div class="flex justify_center inner_padding">
-            <h3 class="color_white">Samih Habbani</h3>
+        <section class="row">
+          <div class="row mt-2">
+            <h3>Profil</h3>
           </div>
 
-          <div class="flex justify_center inner_padding">
-            <img src="img/profile_picture_small.jpg" alt="" />
+          <div class="row mx-auto m-2">
+            <img src="assets/img/profile_picture_small.jpg" alt="Photo d'identité">
           </div>
 
-          <div class="flex justify_center inner_padding">
-            <p class="color_white text_center">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
+          <div class="row fw-bold fs-5">
+            <p class="">Samih HABBANI</p>
           </div>
 
-          <div class="flex justify_center inner_padding" id="social_network">
-            <i class="icon fb"></i>
-            <i class="icon insta"></i>
-            <i class="icon snap"></i>
-            <i class="icon twitter"></i>
-            <i class="icon linkedin"></i>
+          <div class="grid text-light">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-snapchat"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin"></i>
           </div>
-        </div>
-
+        </section>
+        <hr>
         <!-- Navigation -->
-        <div>
-          <div id="navigation" class="flex justify_center padding_part">
-            <ul class="nav_bar">
-              <li class="flex align_center">
-                <i class="about"></i
-                ><a class="color_white" href="#">About me</a>
-              </li>
-              <li class="flex align_center">
-                <i class="portfolio"></i
-                ><a class="color_white" href="#">Portfolio</a>
-              </li>
-              <li class="flex align_center">
-                <i class="services"></i
-                ><a class="color_white" href="#">Services</a>
-              </li>
-              <li class="flex align_center">
-                <i class="resume"></i><a class="color_white" href="#">Resume</a>
-              </li>
-              <li class="flex align_center">
-                <i class="blog"></i><a class="color_white" href="#">Blog</a>
-              </li>
-              <li class="flex align_center">
-                <i class="contact"></i
-                ><a class="color_white" href="#">Contact</a>
-              </li>
+        <section class="row">
+          <div class="ms-5">
+            <ul class="ms-5 text-start text-light list-unstyled">
+              <li><i class="fa-solid fa-address-card"></i><a class="link-light" href="#">A Propos</a></li>
+              <li><i class="fa-solid fa-terminal"></i><a class="link-light" href="#">Portfolio</a></li>
+              <li><i class="fa-solid fa-bell"></i><a class="link-light" href="#">Services</a></li>
+              <li><i class="fa-solid fa-file"></i><a class="link-light" href="#">Résumé</a></li>
+              <li><i class="fa-solid fa-blog"></i><a class="link-light" href="#">Blog</a></li>
+              <li><i class="fa-solid fa-address-book"></i><a class="link-light" href="#">Contactez-moi</a></li>
             </ul>
           </div>
 
-          <div class="flex justify_center inner_padding">
-            <button id="buttonHireMe" class="flex align-center color_white">
-              <i class="send"></i>
-              Hire me
+          <div>
+            <button id="buttonHireMe" class="btn btn-primary">
+              <i class="fa-solid fa-share-from-square"></i>&nbsp;&nbsp;
+              Embauchez-moi
             </button>
           </div>
-        </div>
-
+        </section>
+        <hr>
         <!-- Dark Mode -->
-        <div class="flex align_center flex_column padding_part">
-          <p class="color_white">Dark Mode</p>
-          <label class="switch">
-            <input type="checkbox" />
-            <span class="slider"></span>
-          </label>
-        </div>
-      </div>
+        <section class="row">
+          <div>
+            <p>Mode Sombre</p>
+          </div>
+
+          <div>
+            <input class="btn btn-check" type="checkbox">
+          </div>
+        </section>
+      </aside>
 
       <!-- RIGHT PART -->
-      <div id="right_part" class="padding_outer">
-        <!-- Presentation -->
-
-        <div class="flex">
-          <div class="half">
-            <div class="inner_padding">
-              <h1>Samih Habbani</h1>
+      <div id="rightPart" class="col-md-9 p-3">
+        <section class="row">
+          <!-- Identification -->
+          <div class="col-md-6">
+            <div>
+              <h1>Samih HABBANI</h1>
             </div>
 
-            <div class="inner_padding">
-              <h4>Full Stack Developer</h4>
+            <div>
+              <h4>Développeur Full Stack</h4>
             </div>
 
-            <div class="inner_padding">
-              <p>
-                Lorem Ipsum is simply dummy <span>text</span> of the printing
-                and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown
-                <span>printer</span> took a galley of type and scrambled it to
-                make a type specimen book.
-              </p>
+            <div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, dicta, blanditiis, dolore eaque veniam numquam perferendis tempore odit sint laudantium iste magni repellat suscipit perspiciatis.</p>
             </div>
 
-            <div class="flex inner_padding">
-              <button class="color_white flex align_center">
-                <i class="right-arrow"></i> View portfolio
+            <div>
+              <button class="btn btn-primary" type="submit">
+                <i></i> Voir le portfolio
               </button>
-              <button class="color_white flex align_center">
-                <i class="sheet"></i> View resume
+
+              <button class="btn btn-primary" type="submit">
+                <i></i> Voir le résumé
               </button>
             </div>
           </div>
 
-          <div class="half flex justify_end">
-            <img src="img/profil_picture.jpg" alt="" />
+          <!-- Picture -->
+          <div class="col-md-6">
+            <img src="assets/img/profil_picture.jpg" alt="Profil"/>
           </div>
-        </div>
-
-        <!-- What do I do -->
-        <div class="padding_part">
-          <div class="inner_padding">
-            <h3>What do I do?</h3>
-          </div>
+        </section>
+        <hr>
+        <section>
           <div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has <span>been</span> the industry's
-              standard dummy text ever since the 1500s, when an unknown printer
-              <span>took</span> a galley of type and scrambled it to make a type
-              specimen book.
-            </p>
+            <h3><i></i>Qu'est-je réalisé ?</h3>
           </div>
-        </div>
 
-        <!-- Experiences -->
-        <div id="experiences" class="padding_part">
-          <ul class="flex flex_wrap">
-            <li>
-              <i></i>
-              <h5>Vanilla Javascript</h5>
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, quo, consequatur, ullam magnam minus dolor quam dicta sit error sapiente quae optio ipsum ipsa illum necessitatibus. Illum, temporibus, facere, dolor, placeat alias harum exercitationem sit autem cum amet aspernatur odit assumenda et error aut natus minus libero tempora reiciendis asperiores.</p>
+          </div>
+        </section>
+        <hr>
+        <!-- Realisations -->
+        <section class="row">
+          <div class="d-flex flex-row">
+            <div class="bg-light p-2 rounded-1 me-1">
+              <img class="icons" src="assets/img/icons8-javascript.gif" alt="Javascript">
+
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+              <h6>JS Vanilla</h6>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, unde, quas adipisci voluptatem in iusto pariatur veritatis delectus cum tenetur nam magni repellat minima reprehenderit!
               </p>
-            </li>
+            </div>
 
-            <!--  -->
+            <div class="bg-light p-2 rounded-1 me-1">
+              <img class="icons" src="assets/img/icons8-html-5-144.png" alt="HTML"> +
+              <img class="icons" src="assets/img/icons8-css3-100.png" alt="CSS">
 
-            <li>
-              <i></i>
-              <h5>Vanilla Javascript</h5>
+
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+              <h6>HTML-CSS</h6>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, mollitia, consequatur excepturi rem quibusdam ut itaque nam velit ipsa sunt laudantium vitae cum fugiat reiciendis.
               </p>
-            </li>
+            </div>
 
-            <!--  -->
+            <div class="bg-light p-2 rounded-1 me-1">
+              <img class="icons" src="assets/img/icons8-logo-php-80.png" alt="PHP"> +
+              <img class="icons" src="assets/img/icons8-mysql-80.png" alt="MySql">
 
-            <li>
-              <i></i>
-              <h5>Vanilla Javascript</h5>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+              <h6>PHP-MySql</h6>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, fugiat, quas, laboriosam, nam odit quibusdam neque doloribus debitis maiores voluptate ab voluptas vitae nihil unde.
               </p>
-            </li>
+            </div>
 
-            <!--  -->
+            <div class="bg-light p-2 rounded-1">
+              <img class="icons" src="assets/img/icons8-réagir-80.png" alt="pict" href="#">
 
-            <li>
-              <i></i>
-              <h5>Vanilla Javascript</h5>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+              <h6>React</h6>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, consequuntur fuga consectetur aut vel rem quae. Debitis, eaque beatae ab minima inventore ratione reiciendis corporis!
               </p>
-            </li>
-
-            <li>
-              <i></i>
-              <h5>Vanilla Javascript</h5>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
-              </p>
-            </li>
-
-            <!--  -->
-
-            <li>
-              <i></i>
-              <h5>Vanilla Javascript</h5>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
-              </p>
-            </li>
-
-            <!--  -->
-
-            <li>
-              <i></i>
-              <h5>Vanilla Javascript</h5>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
-              </p>
-            </li>
-
-            <!--  -->
-
-            <li>
-              <i></i>
-              <h5>Vanilla Javascript</h5>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
-              </p>
-            </li>
-
-            <li>
-              <i></i>
-              <h5>Vanilla Javascript</h5>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
-              </p>
-            </li>
-
-            <!--  -->
-
-            <li>
-              <i></i>
-              <h5>Vanilla Javascript</h5>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
-              </p>
-            </li>
-
-            <!--  -->
-
-            <li>
-              <i></i>
-              <h5>Vanilla Javascript</h5>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
-              </p>
-            </li>
-
-            <!--  -->
-
-            <li>
-              <i></i>
-              <h5>Vanilla Javascript</h5>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
-              </p>
-            </li>
-          </ul>
-        </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
-    
-    <script src="src/bootstrap-5.2.3/js/bootstrap.bundle.js" type="text/javascript"></script>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="px-2 py-3 text-center">
+      <h6>&#169; All Rights Reserved to Gilbert</h6>
+    </footer>
+
+    <script src="src/bootstrap-5.2.3/js/bootstrap.bundle.js"></script>
+    <script src="src/js/tools.js"></script>
     <script src="src/js/scripts.js"></script>
   </body>
 </html>
